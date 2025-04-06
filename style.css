@@ -56,7 +56,13 @@ body {
 
 /* Navbar toggler icon (icono para dispositivos móviles) */
 .navbar-toggler-icon {
-    background-color: white; /* Icono blanco para el menú móvil */
+    background-image: none;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    box-shadow: 0 6px 0 0 white, 0 12px 0 0 white; /* crea 3 líneas */
 }
 
 /* Ajuste para la versión móvil */
@@ -241,27 +247,13 @@ h4 {
     color: #EF2B00; /* Naranja intenso en hover */
 }
 
-/* Curva separadora */
-.separator {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 150px;
-}
-
-.separator svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.separator path {
-    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3)); /* Sombra para resaltar la curva */
-}
-
-/* Estilo para la curva separadora dentro de la sección */
 #about {
+    background-color: #EF2B00 !important; /* Naranja intenso */
+    color: white;
     position: relative;
-    background-color: #212121; /* Fondo oscuro para la sección */
+}
+
+#projects {
+    background-color: #EF2B00 !important; /* Mismo tono naranja */
     color: white;
 }
