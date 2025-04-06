@@ -1,0 +1,267 @@
+/* Deshabilitar el desplazamiento al cargar la página */
+html, body {
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
+    height: 100%; /* Asegurarnos de que la altura sea 100% */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212121; /* Fondo negro carbón */
+    color: white; /* Texto blanco */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #212121; /* Igual al fondo de la página */
+    position: fixed; /* Fijar el navbar al principio */
+    width: 100%;
+    z-index: 1000; /* Asegurarse de que esté sobre el contenido */
+    padding: 10px 0; /* Aumentar la altura del navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil para diferenciarlo de la página */
+}
+
+/* Ajuste del navbar */
+.navbar .container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Asegúrate de que los enlaces del navbar estén alineados correctamente */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Navbar brand (logo o nombre) */
+.navbar .navbar-brand {
+    color: white;
+    font-size: 1.8rem; /* Tamaño más grande para el nombre */
+}
+
+/* Navbar links */
+.navbar .nav-link {
+    color: white;
+    padding: 12px 20px; /* Aumentar espacio alrededor de los enlaces */
+    font-size: 1.1rem; /* Aumentar el tamaño de la fuente */
+}
+
+.navbar .nav-link:hover {
+    color: #EF2B00; /* Naranja en hover */
+}
+
+/* Navbar toggler icon (icono para dispositivos móviles) */
+.navbar-toggler-icon {
+    background-color: white; /* Icono blanco para el menú móvil */
+}
+
+/* Ajuste para la versión móvil */
+.navbar-toggler {
+    border: none; /* Eliminar el borde del botón */
+}
+
+/* Fondo del navbar cuando se hace scroll (opcional) */
+.navbar.scrolled {
+    background-color: rgba(33, 33, 33, 0.95); /* Fondo ligeramente transparente cuando hace scroll */
+    transition: background-color 0.3s;
+}
+
+/* Home Section */
+#home {
+    background-color: #212121; /* Fondo oscuro */
+    height: 100vh; /* La sección ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evitar el scroll */
+}
+
+/* Título personalizado */
+.custom-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ajustar las imágenes */
+.photo-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin-right: 5%;
+}
+
+.photo-container img {
+    width: 100%; /* Ancho 100% del contenedor */
+    height: 100%; /* Alto 100% del contenedor */
+    object-fit: cover;
+    border-radius: 50%; /* Imagen redonda */
+    box-shadow: 0 0 50px rgba(239, 43, 0, 0.7); /* Sombra neón naranja */
+    transform: translateY(-100px); /* Inicia fuera de la pantalla (arriba) */
+    opacity: 0; /* Inicialmente invisible */
+    animation: slideInFromTop 1s ease forwards; /* Animación para que la imagen entre desde arriba */
+}
+
+/* Animación de la imagen */
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px); /* Comienza fuera de la pantalla arriba */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Se posiciona en su lugar */
+    }
+}
+
+/* Animación para que el contenido de texto se desplace desde abajo */
+@keyframes slideUp {
+    0% {
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(50px); /* Empieza desplazado hacia abajo */
+    }
+    100% {
+        opacity: 1; /* Se vuelve completamente visible */
+        transform: translateY(0); /* Se posiciona en su lugar */
+    }
+}
+
+/* Clase para la animación del texto */
+.slide-up {
+    animation: slideUp 1s ease forwards; /* Aplica la animación de 1 segundo */
+}
+
+/* Section Styling */
+section {
+    height: 100vh; /* Cada sección ocupa toda la altura de la ventana */
+    padding: 50px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Styling for the Technologies Section */
+#technologies {
+    background-color: #212121; /* Fondo oscuro */
+}
+
+#technologies h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Estilos para las secciones de tecnologías */
+.tech-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los logos */
+}
+
+.tech-logo {
+    width: 50px; /* Tamaño uniforme de los logos */
+    height: auto; /* Mantener la relación de aspecto */
+    transition: transform 0.3s ease-in-out; /* Efecto de zoom al pasar el mouse */
+}
+
+.tech-logo:hover {
+    transform: scale(1.1); /* Aumentar tamaño del logo al pasar el ratón */
+}
+
+/* Espaciado para las columnas de cada tecnología */
+.col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Márgenes entre las secciones */
+.mb-4 {
+    margin-bottom: 30px;
+}
+
+/* Estilos para los enlaces de redes sociales */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 10px 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon-img {
+    width: 40px; /* Tamaño de los iconos */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover .social-icon-img {
+    transform: scale(1.1); /* Aumentar el tamaño del icono al pasar el ratón */
+}
+
+/* Estilo para los iconos de redes sociales */
+.social-icon img {
+    width: 40px; /* Tamaño de los iconos */
+    height: 40px;
+    filter: invert(22%) sepia(89%) saturate(5111%) hue-rotate(10deg); /* Naranja intenso */
+}
+
+/* Efecto Hover para los iconos */
+.social-icon:hover img {
+    filter: invert(22%) sepia(89%) saturate(5111%) hue-rotate(10deg); /* Mantiene el color naranja en hover */
+}
+
+/* Nuevos colores naranjas con el mismo tono de los iconos */
+.orange {
+    color: #EF2B00; /* Naranja intenso */
+}
+
+.orange-hover:hover {
+    color: #EF2B00; /* Naranja intenso en hover */
+}
+
+/* Curva separadora */
+.separator {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+}
+
+.separator svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.separator path {
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3)); /* Sombra para resaltar la curva */
+}
+
+/* Estilo para la curva separadora dentro de la sección */
+#about {
+    position: relative;
+    background-color: #212121; /* Fondo oscuro para la sección */
+    color: white;
+}

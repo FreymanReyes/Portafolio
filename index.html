@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuentes de Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <!-- Menú de navegación centrado -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto"> <!-- mx-auto para centrar los enlaces -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#technologies">Technologies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Home Section -->
+    <section id="home" class="text-center py-5">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="text-left slide-up">
+                <h1 class="display-4 custom-title">Hi, I'm <p class="orange">Freyman Reyes</p></h1>
+                <p class="lead">Web Developer | Designer | Problem Solver</p>
+                <!-- Redes Sociales -->
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/freymanreyes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-icon">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" class="social-icon-img">
+                    </a>
+                    <a href="https://github.com/tu-usuario" target="_blank" class="social-icon">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" class="social-icon-img">
+                    </a>
+                </div>
+            </div>            
+            <div class="photo-container">
+                <img src="https://img.freepik.com/vector-premium/retrato-avatar-hombre-risa-alegria-sonrisa-calma-diversidad-personaje_147933-10379.jpg" alt="Freyman Reyes" class="img-fluid rounded-circle neon-effect">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="text-center py-5" style="position: relative;">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm passionate about creating beautiful and functional websites. With expertise in both frontend and backend development, I aim to build intuitive and responsive user experiences.</p>
+        </div>
+
+        <!-- Curva separadora dentro de la sección -->
+        <div class="separator">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+                <path fill="#EF2B00" d="M0,0 C200,150 500,-50 720,80 C940,200 1200,100 1440,50 L1440,150 L0,150 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="py-5">
+        <div class="container text-center">
+            <h2>Technologies I Use</h2>
+            <div class="row justify-content-center">
+                <!-- Frontend -->
+                <div class="col-md-3 mb-4">
+                    <h4>Frontend</h4>
+                    <div class="tech-logos">
+                        <img src="Logos/html5.svg" alt="HTML" class="img-fluid tech-logo">
+                        <img src="logos/css.svg" alt="CSS" class="img-fluid tech-logo">
+                        <img src="Logos/javascript.svg" alt="JavaScript" class="img-fluid tech-logo">
+                        <img src="logos/angular.svg" alt="Angular" class="img-fluid tech-logo">
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="col-md-3 mb-4">
+                    <h4>Backend</h4>
+                    <div class="tech-logos">
+                        <img src="Logos/csharp.svg" alt="C#" class="img-fluid tech-logo">
+                        <img src="Logos/laravel.svg" alt="Laravel" class="img-fluid tech-logo">
+                        <img src="logos/Php_light.svg" alt="PHP" class="img-fluid tech-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/.NET_Core_Logo.svg" alt=".NET" class="img-fluid tech-logo">
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="col-md-3 mb-4">
+                    <h4>Database</h4>
+                    <div class="tech-logos">
+                        <img src="Logos/mysql.svg" alt="MySQL" class="img-fluid tech-logo">
+                        <img src="Logos/sql-server.svg" alt="SQL Server" class="img-fluid tech-logo">
+                    </div>
+                </div>
+
+                <!-- Version Control & Azure -->
+                <div class="col-md-3 mb-4">
+                    <h4>Version Control & Azure</h4>
+                    <div class="tech-logos">
+                        <img src="Logos/Github_dark.svg" alt="Git" class="img-fluid tech-logo">
+                        <img src="Logos/azure.svg" alt="Azure" class="img-fluid tech-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="text-center py-5">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="images/project1.jpg" alt="Project 1" class="img-fluid">
+                    <a href="https://github.com/yourusername/project1" target="_blank" class="d-block mt-2">View Project</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/project2.jpg" alt="Project 2" class="img-fluid">
+                    <a href="https://github.com/yourusername/project2" target="_blank" class="d-block mt-2">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-center py-5">
+        <div class="container">
+            <h2>Contact</h2>
+            <form action="#" method="post">
+                <input type="text" placeholder="Your Name" class="form-control mb-3" required>
+                <input type="email" placeholder="Your Email" class="form-control mb-3" required>
+                <textarea placeholder="Your Message" class="form-control mb-3" required></textarea>
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
