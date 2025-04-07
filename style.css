@@ -115,7 +115,7 @@ body {
     box-shadow: 0 0 50px rgba(239, 43, 0, 0.7); /* Sombra neón naranja */
     transform: translateY(-100px); /* Inicia fuera de la pantalla (arriba) */
     opacity: 0; /* Inicialmente invisible */
-    animation: slideInFromTop 1s ease forwards; /* Animación para que la imagen entre desde arriba */
+    animation: slideInFromTop 2s ease forwards; /* Animación para que la imagen entre desde arriba */
 }
 
 /* Animación de la imagen */
@@ -142,9 +142,16 @@ body {
     }
 }
 
+/* Clase para aplicar las animaciones dinámicamente */
+.slide-up, .slide-down {
+    opacity: 0;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
 /* Clase para la animación del texto */
 .slide-up {
-    animation: slideUp 1s ease forwards; /* Aplica la animación de 1 segundo */
+    animation: slideUp 2s ease forwards; /* Aplica la animación de 1 segundo */
 }
 
 /* Section Styling */
@@ -167,6 +174,12 @@ h4 {
 /* Styling for the Technologies Section */
 #technologies {
     background-color: #212121; /* Fondo oscuro */
+    position: relative;
+    height: 100vh; /* La sección ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evitar el scroll */
 }
 
 #technologies h2 {
@@ -248,12 +261,98 @@ h4 {
 }
 
 #about {
-    background-color: #EF2B00 !important; /* Naranja intenso */
+    background-color: #121212; /* Fondo oscuro personalizado */
     color: white;
     position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 }
 
 #projects {
-    background-color: #EF2B00 !important; /* Mismo tono naranja */
+    background-color: #121212;
     color: white;
+    position: relative;
+    height: 100vh; /* La sección ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evitar el scroll */
 }
+
+#contact {
+    color: white;
+    position: relative;
+    height: 100vh; /* La sección ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evitar el scroll */
+}
+
+.about-text {
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ccc; /* Color claro, pero no blanco total */
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #EF2B00;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.highlight {
+    color: #EF2B00;
+    font-weight: bold;
+}
+
+@keyframes slideTitleUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  .animate-title {
+    animation: slideTitleUp 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #EF2B00;
+    width: 0;
+    animation: typing 3s steps(60, end) forwards, blink 0.7s step-end infinite;
+  }
