@@ -1,0 +1,15 @@
+/* Navbar */
+.navbar {
+    background-color: rgba(44, 194, 149);
+    padding: 0.5rem 1rem; /* reduce el padding para que no sea tan alto */
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem; /* opcional: reduce espacio vertical */
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(2, 27, 26);
+}

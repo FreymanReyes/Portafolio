@@ -1,0 +1,18 @@
+/* Projects Section */
+#projects {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+#projects img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#projects a {
+    color: #007bff;
+}
+
+#projects a:hover {
+    color: #0056b3;
+}

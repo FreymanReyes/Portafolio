@@ -1,0 +1,44 @@
+/* Variables Globales */
+@import url('variables.css');
+
+/* Estilos Generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(2, 27, 26);
+    color: #ffffff;
+}
+
+/* Estilo de Fondo */
+body {
+    background-color: rgba(2, 27, 26);
+    color: #ffffff;
+}
+
+h1, h2, h3, h4 {
+    color: #ffffff;
+}
+
+/* Estilos Globales para enlaces */
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+/* Botón General */
+button {
+    background-color: rgba(2, 27, 26);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgba(44, 194, 149);
+}
+

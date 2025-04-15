@@ -1,0 +1,128 @@
+/* Home Section */
+#home {
+    background-color: rgba(2, 27, 26);
+    padding-top: 100px !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#home .custom-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+#home .orange {
+    color: var(--highlight-color);
+}
+
+#home .lead {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+}
+
+/* Animaciones */
+.slide-up {
+    animation: slideUp 1s ease-out forwards;
+}
+
+.slide-down {
+    animation: slideDown 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.photo-container {
+    max-width: 280px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 255, 195, 0.6);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon-img {
+    width: 62px;
+    height: 62px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(100%);
+    padding: 2px;
+}
+
+.social-icon:hover .social-icon-img {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 6px rgba(0, 255, 195, 0.4));
+}
+
+.hidden-animation {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    #home {
+        padding-top: 120px;
+    }
+
+    #home .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .photo-container {
+        max-width: 200px;
+        margin-bottom: 1rem;
+    }
+
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #home .custom-title {
+        font-size: 2.5rem;
+    }
+
+    #home .lead {
+        font-size: 1.2rem;
+    }
+}
