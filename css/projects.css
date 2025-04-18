@@ -1,7 +1,10 @@
 /* Projects Section */
 #projects {
-    background-color: #fff;
-    padding: 50px 0;
+    background-color: rgba(2, 27, 26);
+    padding-top: 100px !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 #projects img {

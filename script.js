@@ -1,28 +1,29 @@
-// Script para cambiar el fondo del navbar cuando se hace scroll
-window.onscroll = function() {
-    var navbar = document.querySelector('.navbar');
-    if (window.scrollY > 0) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-};
-
 document.addEventListener("DOMContentLoaded", function () {
-  const elementsToAnimate = document.querySelectorAll('.slide-up, .slide-down');
+    // Navbar scroll background
+    window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 0) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 
-  const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              entry.target.classList.remove('hidden-animation');
-              observer.unobserve(entry.target); // Detiene la observación
-          }
-      });
-  }, {
-      threshold: 0.1
-  });
+    // Animaciones al hacer scroll
+    const elementsToAnimate = document.querySelectorAll('.slide-up, .slide-down, .slide-in-right');
 
-  elementsToAnimate.forEach(element => {
-      observer.observe(element);
-  });
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('hidden-animation');
+                observer.unobserve(entry.target); // Deja de observar una vez visible
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    elementsToAnimate.forEach(element => {
+        observer.observe(element);
+    });
 });

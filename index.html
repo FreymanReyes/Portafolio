@@ -21,6 +21,9 @@
     <!-- Fuentes de Google-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
+    <!-- Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
@@ -93,50 +96,55 @@
     <!-- Technologies Section -->
     <section id="technologies" class="py-5">
         <div class="container text-center">
-            <h2>Technologies I Use</h2>
-            <div class="row justify-content-center">
-                <!-- Frontend -->
-                <div class="col-md-3 mb-4">
-                    <h4>Frontend</h4>
-                    <div class="tech-logos">
-                        <img src="Logos/html5.svg" alt="HTML" class="img-fluid tech-logo">
-                        <img src="logos/css.svg" alt="CSS" class="img-fluid tech-logo">
-                        <img src="Logos/javascript.svg" alt="JavaScript" class="img-fluid tech-logo">
-                        <img src="logos/angular.svg" alt="Angular" class="img-fluid tech-logo">
-                    </div>
-                </div>
-
-                <!-- Backend -->
-                <div class="col-md-3 mb-4">
-                    <h4>Backend</h4>
-                    <div class="tech-logos">
-                        <img src="Logos/csharp.svg" alt="C#" class="img-fluid tech-logo">
-                        <img src="Logos/laravel.svg" alt="Laravel" class="img-fluid tech-logo">
-                        <img src="logos/Php_light.svg" alt="PHP" class="img-fluid tech-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/.NET_Core_Logo.svg" alt=".NET" class="img-fluid tech-logo">
-                    </div>
-                </div>
-
-                <!-- Database -->
-                <div class="col-md-3 mb-4">
-                    <h4>Database</h4>
-                    <div class="tech-logos">
-                        <img src="Logos/mysql.svg" alt="MySQL" class="img-fluid tech-logo">
-                        <img src="Logos/sql-server.svg" alt="SQL Server" class="img-fluid tech-logo">
-                    </div>
-                </div>
-
-                <!-- Version Control & Azure -->
-                <div class="col-md-3 mb-4">
-                    <h4>Version Control & Azure</h4>
-                    <div class="tech-logos">
-                        <img src="Logos/Github_dark.svg" alt="Git" class="img-fluid tech-logo">
-                        <img src="Logos/azure.svg" alt="Azure" class="img-fluid tech-logo">
-                    </div>
-                </div>
+          <h2 class="section-title slide-in-right hidden-animation">Technologies I Use</h2>
+          <div class="row justify-content-center g-0">
+            
+            <!-- Frontend -->
+            <div class="col-md-3 mb-4 mx-3 tech-card slide-up hidden-animation">
+              <h4>Frontend</h4>
+              <div class="tech-logos d-flex flex-wrap justify-content-center">
+                <img src="Logos/html5.svg" alt="HTML" class="tech-logo">
+                <img src="logos/css.svg" alt="CSS" class="tech-logo">
+                <img src="Logos/javascript.svg" alt="JavaScript" class="tech-logo">
+                <img src="Logos/typescript.svg" alt="Typescript" class="tech-logo">
+                <img src="logos/angular.svg" alt="Angular" class="tech-logo">
+              </div>
             </div>
+      
+            <!-- Backend -->
+            <div class="col-md-3 mb-4 mx-3 tech-card slide-up hidden-animation">
+              <h4>Backend</h4>
+              <div class="tech-logos d-flex flex-wrap justify-content-center">
+                <img src="Logos/csharp.svg" alt="C#" class="tech-logo">
+                <img src="Logos/laravel.svg" alt="Laravel" class="tech-logo">
+                <img src="logos/php_color.svg" alt="PHP" class="tech-logo">
+                <img src="Logos/Net.svg" alt=".NET" class="tech-logo">
+                <img src="Logos/python.svg" alt="python" class="tech-logo logo-fix-python">
+              </div>
+            </div>
+      
+            <!-- Database -->
+            <div class="col-md-3 mb-4 mx-3 tech-card slide-up hidden-animation">
+              <h4>Database</h4>
+              <div class="tech-logos d-flex flex-wrap justify-content-center">
+                <img src="Logos/mysql.svg" alt="MySQL" class="tech-logo">
+                <img src="Logos/sql-server.svg" alt="SQL Server" class="tech-logo">
+                <img src="Logos/mongodb.svg" alt="MongoDb" class="tech-logo">
+              </div>
+            </div>
+      
+            <!-- Version Control & Azure -->
+            <div class="col-md-3 mb-4 mx-3 tech-card slide-up hidden-animation">
+              <h4>Version Control & Azure</h4>
+              <div class="tech-logos d-flex flex-wrap justify-content-center">
+                <img src="Logos/Github_dark.svg" alt="Git" class="tech-logo">
+                <img src="Logos/azure.svg" alt="Azure" class="tech-logo">
+              </div>
+            </div>
+
+          </div>
         </div>
-    </section>
+    </section>      
 
     <!-- Projects Section -->
     <section id="projects" class="text-center py-5">
@@ -167,6 +175,12 @@
             </form>
         </div>
     </section>
+
+    <!-- floating button to download CV  -->
+    <a href="Files/CvFreymanReyes.pdf" download="CvFreymanReyes.pdf" class="btn-floating" aria-label="Descargar Hoja de Vida">
+        <i class="fas fa-download"></i>
+        <span class="cv-text">CV</span>
+    </a>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

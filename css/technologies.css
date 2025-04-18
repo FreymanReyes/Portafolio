@@ -1,0 +1,87 @@
+#technologies {
+    background-color: #021B1A;
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: all 5s ease;
+}
+
+/* Animaciones base */
+.hidden-animation {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-up:not(.hidden-animation) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease;
+}
+
+.slide-in-right:not(.hidden-animation) {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Cards */
+.tech-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 255, 195, 0.2);
+}
+
+/* Logos */
+.tech-logo {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    filter: grayscale(100%);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.tech-logo:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+.logo-fix-python {
+    width: 90px !important;
+    height: 90px !important;
+    object-fit: contain;
+}
+
+.tech-card h4 {
+    color: #ffffff;
+    background-image: linear-gradient(to right, var(--highlight-color) 50%, #ffffff 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 1s ease;
+}
+
+.tech-card:hover h4 {
+    background-position: left bottom;
+}

@@ -42,3 +42,51 @@ button:hover {
     background-color: rgba(44, 194, 149);
 }
 
+/* Estilos para el botón flotante */
+.btn-floating {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--highlight-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 255, 195, 0.3);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    animation: bounce 2.5s infinite;
+}
+
+.btn-floating:hover {
+    transform: scale(1.15);
+    background-color: rgba(44, 194, 149, 0.9);
+    box-shadow: 0 12px 24px rgba(0, 255, 195, 0.5);
+}
+
+.btn-floating i {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.cv-text {
+    font-size: 0.7rem;
+    margin-top: 2px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+/* Animación suave */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
